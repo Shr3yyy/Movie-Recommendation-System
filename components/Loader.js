@@ -1,4 +1,3 @@
-// File: components/Loader.js
 import styles from '../styles/Loader.module.css'
 
 export default function Loader() {
