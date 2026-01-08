@@ -1,4 +1,3 @@
-// File: components/SearchBar.js
 import { useState, useEffect } from 'react'
 import styles from '../styles/SearchBar.module.css'
 
@@ -6,7 +5,6 @@ export default function SearchBar({ onSearch }) {
   const [query, setQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
 
-  // Debounce the search query to avoid too many API calls
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query)
