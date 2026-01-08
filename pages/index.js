@@ -1,4 +1,4 @@
-// File: pages/index.js
+
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import MovieGrid from '../components/MovieGrid'
@@ -14,26 +14,26 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [selectedGenre, setSelectedGenre] = useState(null)
 
-  // Fetch all movie categories on page load
+  
   useEffect(() => {
     fetchAllMovies()
   }, [])
 
-  // Fetch movies from different categories
+ 
   const fetchAllMovies = async () => {
     setLoading(true)
     try {
-      // Fetch trending movies
+     
       const trendingRes = await fetch('/api/movies/trending')
       const trendingData = await trendingRes.json()
       setTrendingMovies(trendingData.results || [])
 
-      // Fetch popular movies
+     
       const popularRes = await fetch('/api/movies/popular')
       const popularData = await popularRes.json()
       setPopularMovies(popularData.results || [])
 
-      // Fetch top rated movies
+     
       const topRatedRes = await fetch('/api/movies/top-rated')
       const topRatedData = await topRatedRes.json()
       setTopRatedMovies(topRatedData.results || [])
@@ -44,7 +44,7 @@ export default function Home() {
     }
   }
 
-  // Handle genre filter change
+
   const handleGenreChange = async (genreId) => {
     setSelectedGenre(genreId)
     
@@ -70,7 +70,7 @@ export default function Home() {
       <Navbar />
       
       <main className={styles.main}>
-        {/* Hero Section */}
+       
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Discover Your Next Favorite Movie</h1>
           <p className={styles.heroSubtitle}>
@@ -78,14 +78,14 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Genre Filter */}
+       
         <GenreFilter onGenreChange={handleGenreChange} selectedGenre={selectedGenre} />
 
         {loading ? (
           <Loader />
         ) : (
           <>
-            {/* Show filtered movies if genre is selected */}
+            
             {selectedGenre ? (
               <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>Filtered Movies</h2>
@@ -93,19 +93,19 @@ export default function Home() {
               </section>
             ) : (
               <>
-                {/* Trending Movies */}
+                
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>🔥 Trending Now</h2>
                   <MovieGrid movies={trendingMovies.slice(0, 6)} />
                 </section>
 
-                {/* Popular Movies */}
+              
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>⭐ Popular Movies</h2>
                   <MovieGrid movies={popularMovies.slice(0, 6)} />
                 </section>
 
-                {/* Top Rated Movies */}
+               
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>🏆 Top Rated</h2>
                   <MovieGrid movies={topRatedMovies.slice(0, 6)} />
