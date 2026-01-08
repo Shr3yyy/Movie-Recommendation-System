@@ -1,5 +1,3 @@
-/* File: styles/MovieDetails.module.css */
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -134,7 +132,7 @@
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 968px) {
   .detailsContainer {
     grid-template-columns: 1fr;
