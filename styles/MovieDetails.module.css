@@ -1,0 +1,175 @@
+/* File: styles/MovieDetails.module.css */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.detailsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 3rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.posterContainer {
+  width: 100%;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #666;
+}
+
+.rating {
+  font-weight: 600;
+  color: #f39c12;
+}
+
+.genres {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.genre {
+  background-color: #667eea;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.overview h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.overview p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #888;
+  font-style: italic;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.recommendations {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+}
+
+.recommendationsTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.error {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .detailsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .posterContainer {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    gap: 1rem;
+  }
+
+  .overview h2 {
+    font-size: 1.3rem;
+  }
+
+  .overview p {
+    font-size: 0.95rem;
+  }
+
+  .recommendationsTitle {
+    font-size: 1.5rem;
+  }
+}
