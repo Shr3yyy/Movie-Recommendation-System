@@ -1,6 +1,6 @@
-// File: pages/api/movies/top-rated.js
 
-// API route to fetch top rated movies from TMDB
+
+
 export default async function handler(req, res) {
   const API_KEY = process.env.TMDB_API_KEY
   
