@@ -1,0 +1,59 @@
+/* File: styles/SearchBar.module.css */
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.searchBar:focus-within {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+.searchButton {
+  background-color: #667eea;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: #5568d3;
+}
+
+.searchButton:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .searchInput {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .searchButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
