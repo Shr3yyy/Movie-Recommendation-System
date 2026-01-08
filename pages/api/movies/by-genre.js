@@ -1,6 +1,6 @@
-// File: pages/api/movies/by-genre.js
 
-// API route to fetch movies by genre
+
+
 export default async function handler(req, res) {
   const { genreId } = req.query
   const API_KEY = process.env.TMDB_API_KEY
