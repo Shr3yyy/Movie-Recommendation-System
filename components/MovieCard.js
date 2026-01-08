@@ -1,4 +1,3 @@
-// File: components/MovieCard.js
 import { useRouter } from 'next/router'
 import styles from '../styles/MovieCard.module.css'
 
@@ -9,7 +8,7 @@ export default function MovieCard({ movie }) {
     router.push(`/movie/${movie.id}`)
   }
 
-  // Get poster image URL or use placeholder
+
   const posterUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     : '/placeholder.png'
