@@ -1,4 +1,4 @@
-// File: pages/search.js
+
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
