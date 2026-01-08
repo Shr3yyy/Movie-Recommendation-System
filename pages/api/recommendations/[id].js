@@ -1,6 +1,3 @@
-
-
-
 export default async function handler(req, res) {
   const { id } = req.query
   const API_KEY = process.env.TMDB_API_KEY
