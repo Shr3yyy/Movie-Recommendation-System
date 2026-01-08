@@ -1,6 +1,6 @@
-// File: pages/api/movies/popular.js
 
-// API route to fetch popular movies from TMDB
+
+
 export default async function handler(req, res) {
   const API_KEY = process.env.TMDB_API_KEY
   
