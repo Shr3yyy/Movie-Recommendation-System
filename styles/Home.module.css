@@ -69,7 +69,6 @@ margin-top: 3rem;
 margin: 0;
 font-size: 0.9rem;
 }
-/* Responsive Design */
 @media (max-width: 768px) {
 .heroTitle {
 font-size: 2rem;
