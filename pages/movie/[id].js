@@ -1,4 +1,3 @@
-// File: pages/movie/[id].js
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar'
@@ -20,7 +19,7 @@ export default function MovieDetails() {
     }
   }, [id])
 
-  // Fetch movie details
+  
   const fetchMovieDetails = async () => {
     try {
       const res = await fetch(`/api/movies/${id}`)
@@ -33,7 +32,7 @@ export default function MovieDetails() {
     }
   }
 
-  // Fetch recommended movies
+ 
   const fetchRecommendations = async () => {
     try {
       const res = await fetch(`/api/recommendations/${id}`)
@@ -67,7 +66,7 @@ export default function MovieDetails() {
       <Navbar />
       
       <main className={styles.main}>
-        {/* Movie Details Section */}
+        
         <div className={styles.detailsContainer}>
           <div className={styles.posterContainer}>
             <img
@@ -111,7 +110,7 @@ export default function MovieDetails() {
           </div>
         </div>
 
-        {/* Recommendations Section */}
+       
         {recommendations.length > 0 && (
           <section className={styles.recommendations}>
             <h2 className={styles.recommendationsTitle}>🎬 Recommended Movies</h2>
