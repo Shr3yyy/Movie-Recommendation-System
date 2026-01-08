@@ -1,6 +1,6 @@
-// File: pages/api/movies/trending.js
 
-// API route to fetch trending movies from TMDB
+
+
 export default async function handler(req, res) {
   const API_KEY = process.env.TMDB_API_KEY
   
