@@ -1,4 +1,3 @@
-// File: components/MovieGrid.js
 import MovieCard from './MovieCard'
 import styles from '../styles/Home.module.css'
 
