@@ -1,6 +1,6 @@
-// File: pages/api/movies/search.js
 
-// API route to search movies by query
+
+
 export default async function handler(req, res) {
   const { query } = req.query
   const API_KEY = process.env.TMDB_API_KEY
